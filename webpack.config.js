@@ -6,28 +6,13 @@ var outPath = path.join(__dirname, './public');
 module.exports = {
     devtool: 'source-map',
     entry: {
-        main: __dirname + "/src/app.tsx",
-        vendor: [
-            'react',
-            'react-dom',
-            'lodash'
-        ]
+        main: __dirname + "/src/app.tsx"
     },
     output: {
         path: outPath,
         filename: 'bundle.js',
         publicPath: '/'
     },
-
-    plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            filename: 'vendor.bundle.js',
-            minChunks: Infinity
-        })
-    ],
-
-
     devServer: {
         contentBase: "./public",//本地服务器所加载的页面所在的目录
         historyApiFallback: true,//不跳转

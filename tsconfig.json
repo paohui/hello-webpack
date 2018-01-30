@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
     "sourceMap": true,
     "jsx": "react",
-    "target": "es5"
-
+    "outDir": "build",
+    "target":"es5"
   },
   "exclude": [
-    "dist",
+    "public",
     "build",
     "node_modules"
   ]
